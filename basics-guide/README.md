@@ -172,7 +172,7 @@ ssh config:
 * create config file in .ssh
 * ```chmod 600 ~/.ssh/config```
 
-<code>Host aws
+Host aws
 	HostName 52.202.74.71
 	User ubuntu 
-	IdentityFile ~/.ssh/aws_ceg3120</code>
+	IdentityFile ~/.ssh/aws_ceg3120
