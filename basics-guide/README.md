@@ -1,4 +1,4 @@
-- git commands
+git commands
 
 status
 * Shows status of the local repository. This status includes:
