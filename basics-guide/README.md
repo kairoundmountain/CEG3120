@@ -68,3 +68,40 @@ git merge
 * Essentially incorporates commits into the current branch.
 * Also used to combine or 'merge' branches.
 * git merge example-branch
+
+git init
+* Create an empty Git repository.
+* If a directory is specified, wil create the .git inside of that directory.
+* git init
+
+.git folder
+* contains all of the data git needs to actually handle your repository.
+* hooks:
+    * contains scripts that are run when certain git actions are performed, such as commits or pushes. These are repository-specific, and thus can be modified.
+* info:
+    * contains miscelaneous extra data, such as exclude, which is like .gitignore but is stored locally and not itself tracked.
+* logs:
+    * contains records of changes to refs
+* objects:
+    * contains all the blobs, trees, and commits indexed by their hash.
+* refs:
+    * contains all references, which are short names for the SHA-1 values of git objects.
+* COMMIT_EDITMSG:
+    * Contents are used as the current commit message.
+* config:
+    * Contains repository-specific configurations, such as user info or remote urls.
+* description:
+    * Contains the name or description of the repo, used by some programs.
+* FETCH_HEAD:
+    * contains the hashes of each branch's head
+* HEAD
+    * contains a ref to the tip of the currently active branch
+* index:
+    * contains the metadata and references to staged changes.
+* packed-refs:
+    * a version of refs packed into a single file for more efficient access.
+* ORIG_HEAD: 
+    * Contains the original HEAD before a merge
+
+.gitignore
+* Specifies files that should not be tracked by git.
