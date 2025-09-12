@@ -35,3 +35,24 @@ git push
 git pull
     Gets the latest version of the current branch from the remote. Should be done before beginning any work to ensure local copy is up to date.
     git pull
+git branch
+    Perform a variety of operations to do with branches.
+        No options: Lists branches.
+        -d: delete a branch
+        -m: move or rename a branch
+        branch name: create a new branch.
+    git branch example-branch
+git checkout
+    Can switch the current branch.
+    Can also restore specified files to the state held in the specified branch.
+    git checkout example-branch
+git fetch
+    updates the local histories and branches from the specified repository.
+    Does not mess with your working files.
+    Must be done before a merge.
+    git fetch
+git merge
+    with no options, mostly equivalent to git push but without the included git fetch.
+    Essentially incorporates commits into the current branch.
+    Also used to combine or 'merge' branches.
+    git merge example-branch
