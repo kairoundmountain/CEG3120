@@ -27,3 +27,11 @@ rm
         --cached flag will remove it only from the index.
     git rm test -f
 git commit
+    stages all files in the current index as a commit, ready to be pushed to remote.
+    git commit -m "Demonstrating multiple commits"
+git push
+    Sends staged commit to the remote. May encounter merge conflicts.
+    git push
+git pull
+    Gets the latest version of the current branch from the remote. Should be done before beginning any work to ensure local copy is up to date.
+    git pull
