@@ -1,4 +1,4 @@
-git commands
+# git commands
 
 status
 * Shows status of the local repository. This status includes:
@@ -105,3 +105,74 @@ git init
 
 .gitignore
 * Specifies files that should not be tracked by git.
+
+
+# Docker
+
+ps
+* lists the currently running containers
+* -a flag to show all containers
+* docker ps -a
+
+images
+* lists all images
+* docker images
+
+run
+* runs a specified command in a new container using the specified image
+    * -it: provides a terminal shell into the container
+    * -p: binds the specified container ports to host ports
+    * --name: Sets a name for the new container
+* docker run -p 80:80 --name "test-container" -it hello-world
+
+start
+* starts specified stopped containers
+* docker start test-container
+
+stop
+* stops specified containers by sending a SIGTERM, then a SIGKILL if that takes too long.
+* docker stop test-container
+
+exec
+* runs specified command in specified running container
+* docker exec -it test-container bash
+
+import
+* unzips an image from the specified location, downloading it if the source is a URL.
+* docker import ~/exampleimage.tar
+
+export
+* exports the specified container's filesystem as a .tar file to STDOUT
+* docker export test-container > testcontainer.tar
+
+kill
+* immediately terminates the container by sending a SIGKILL
+* docker kill test-container
+
+rm
+* Deletes the specified container. This does not remove the image, which is acomplished with docker rmi.
+* docker rm test-container
+
+
+# SSH
+Github Config:
+
+First generate a key with ```ssh-keygen -t ed25519 -C "maruyama.2@wright.edu"```
+
+Then find the .pub file for that key in your .ssh folder and paste it into GitHub's ssh keys section in the user settings.
+
+
+AWS Instance Config:
+* Get private key from AWS Details on the Learner Lab, chmod 600
+* Get public IPv4 address from the Running Instances tab on the AWS console (reached by clicking on the green dot)
+* ```ssh -i ssh -i ~/.ssh/aws_ceg3120 ubuntu@52.202.74.71```
+
+
+ssh config:
+* create config file in .ssh
+* ```chmod 600 ~/.ssh/config```
+
+<code>Host aws
+	HostName 52.202.74.71
+	User ubuntu 
+	IdentityFile ~/.ssh/aws_ceg3120</code>
